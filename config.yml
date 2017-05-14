@@ -1,0 +1,17 @@
+production: &ldap_defaults
+  hostname: {{LDAP_HOSTNAME}}
+  basedn: {{LDAP_BASEDN}}
+  rootdn: {{LDAP_ROOTDN}}
+  passdn: {{LDAP_SECRET}}
+  auth: true
+  port: {{LDAP_PORT}}
+  username_ldap_attribut: {{LDAP_USERNAME_ATTRIBUTE}}
+  simple_tls: {{LDAP_SIMPLE_TLS}}
+  starttls: {{LDAP_STARTTLS}}
+  debug: true
+
+test:
+  <<: *ldap_defaults
+
+development:
+  <<: *ldap_defaults

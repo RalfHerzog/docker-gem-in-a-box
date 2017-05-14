@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  gem-in-a-box:
+    build: .
+    image: "ralfherzog/gem-in-a-box"
+    container_name: "gem-in-a-box"
+    environment:
+    - LDAP_HOSTNAME=localhost
+    - LDAP_BASEDN=ou=groups,dc=domain,dc=tld
+    - LDAP_ROOTDN=cn=admin,dc=domain,dc=tld
+    - LDAP_SECRET=secret
+    ports:
+    - 8080:80
+    volumes:
+    - "/tmp/geminabox-data:/opt/geminabox-data"
