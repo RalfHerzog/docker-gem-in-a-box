@@ -11,7 +11,7 @@ WORKDIR /opt
 VOLUME ["/opt/geminabox-data"]
 
 COPY Gemfile .
-RUN bundler install
+RUN bundle install
 
 COPY config.ru .
 COPY config.yml .
