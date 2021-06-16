@@ -15,7 +15,7 @@ GEM
     multipart-post (2.0.0)
     mustermann (1.0.1)
     nesty (1.0.2)
-    rack (2.0.3)
+    rack (2.2.3)
     rack-auth-ldap (1.0)
       rack
       ruby-ldap
